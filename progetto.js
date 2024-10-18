@@ -410,20 +410,29 @@ const selectID = function () {
   const contenitore = document.getElementById('container')
   return contenitore
 }
-
-const contenitoreSelector = selectID()
-console.log(contenitoreSelector)
+console.log(selectID())
 
 /* ESERCIZIO 21
   Scrivi una funzione per selezionare ogni tag <td> all'interno della pagina.
 */
 
-
-
+const selectTd = function () {
+  const tag = document.getElementsByTagName('td')
+  return tag
+}
+console.log(selectTd())
 
 /* ESERCIZIO 22
   Scrivi una funzione che, tramite un ciclo, stampa in console il testo contenuto in ogni tag <td> all'interno della pagina.
 */
+
+const cicloTd = function () {
+  for (i = 0; i < tag.length; i++) {
+    console.log(tag[i].innerText)
+  }
+}
+
+cicloTd()
 
 /* ESERCIZIO 23
   Scrivi una funzione per aggiungere un background di colore rosso a ogni link all'interno della pagina.
