@@ -116,16 +116,43 @@ console.log(deleteOne('Tommaso', false))
 */
 
 const onlyLetters = function (string) {
-    string.replace(/[0-9]/g, ''])
+  return string.replace(/[0-9]/g, '')
 }
+console.log(onlyLetters('Ho 44 gatti in fila per 6 col resto di 2'))
 
 /* ESERCIZIO 6
   Crea una funzione chiamata "isThisAnEmail" che riceve una stringa come parametro e ritorna true se la stringa è un valido indirizzo email.
 */
 
+const isThisAnEmail = function (string) {
+  if (string.includes('@' && '.')) {
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(isThisAnEmail('tommypanci@gmail.com'))
+
 /* ESERCIZIO 7
   Scrivi una funzione chiamata "whatDayIsIt" che ritorna il giorno della settimana corrente.
 */
+
+const whayDayIsIt = function () {
+  const today = new Date()
+  const daysOfTheWeek = [
+    'Domenica',
+    'Lunedì',
+    'Martedì',
+    'Mercoledì',
+    'Giovedì',
+    'Venerdì',
+    'Sabato'
+  ]
+  return daysOfTheWeek[today.getDay()]
+}
+
+console.log(whayDayIsIt())
 
 /* ESERCIZIO 8
   Scrivi una funzione chiamata "rollTheDices" che riceve un numero come parametro.
@@ -140,13 +167,43 @@ const onlyLetters = function (string) {
   }
 */
 
+const rollTheDices = function (n) {
+  const dropDice = []
+  let sum = 0
+  for(let i = 0; i < n; i++){
+    const dado = dice()
+    dropDice.push(dado)
+    sum += dado
+  }
+  return {
+    sum: sum, 
+    dropDice: dropDice,
+  }
+}
+
+console.log(rollTheDices(6))
+
 /* ESERCIZIO 9
   Scrivi una funzione chiamata "howManyDays" che riceve una data come parametro e ritorna il numero di giorni trascorsi da tale data.
 */
 
+
+
+
+
 /* ESERCIZIO 10
   Scrivi una funzione chiamata "isTodayMyBirthday" che deve ritornare true se oggi è il tuo compleanno, falso negli altri casi.
 */
+
+const isTodayMyBirthday = function (string) {
+  if(string === '21 Settembre'){
+    return true
+  } else {
+    return false
+  }
+}
+
+console.log(isTodayMyBirthday('21 Settembre'))
 
 // Arrays & Oggetti
 
